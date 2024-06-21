@@ -1,0 +1,42 @@
+/*some years before when we used css that time sass is also used*/
+/*but now we use css3 so we use scss*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main-header {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgb(129, 226, 252);
+}
+.main-header h1 {
+  color: rgb(220, 13, 147);
+  font-size: 8rem;
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+}
+.main-header h1:hover {
+  color: rgb(182, 8, 121);
+}
+.main-header h1::after {
+  content: " Tutorial";
+}
+.main-header p {
+  color: rgb(220, 13, 147);
+  font-size: 8rem;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+}
+.main-header p:hover {
+  color: rgb(182, 8, 121);
+}/*# sourceMappingURL=main.css.map */

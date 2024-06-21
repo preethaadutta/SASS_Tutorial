@@ -1,0 +1,61 @@
+/*some years before when we used css that time sass is also used*/
+/*but now we use css3 so we use scss*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//by using sass css will get superpower
+//1) operators
+//2) variables
+//3) nesting
+//4) mixin 
+
+html{
+    font-size: 62.5%;
+}
+
+$bg-color:rgb(129, 226, 252);//defining variable in sass
+@mixin flexproperty{ //when same properties are used again & again then we use mixin
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin textproperty{
+    color: rgb(220, 13, 147);
+    font-size: 5rem+5rem;//we can use any operator +, -, *, /
+    letter-spacing: 0.3rem;
+}
+
+.main-header{
+    width: 100vw;
+    height: 100vh;
+    @include flexproperty;
+    //background: rgb(129, 226, 252);//in css
+    background: $bg-color;//in sass //using the value of that variable
+
+    //nesting: as h1 and p tags are inside .main-header class so within that class we can style h1 and p tags
+    h1{
+        @include textproperty;
+        letter-spacing: 0.4rem;
+
+        //nesting
+        &:hover{
+            color: rgb(182, 8, 121);
+        }
+        &::after{
+            content: " Tutorial";
+        }
+    }
+    
+    p{
+        @include textproperty;
+
+        //nesting
+        &:hover{
+            color: rgb(182, 8, 121);
+        }
+    }
+}
